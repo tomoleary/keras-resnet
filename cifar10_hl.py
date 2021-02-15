@@ -11,10 +11,10 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 os.environ["KMP_WARNINGS"] = "FALSE" 
 import tensorflow as tf
-from tf.keras.datasets import cifar10
-from tf.keras.preprocessing.image import ImageDataGenerator
-from tf.keras.utils import np_utils
-from tf.keras.callbacks import ReduceLROnPlateau, CSVLogger, EarlyStopping
+from tensorflow.keras.datasets import cifar10
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.utils import np_utils
+from tensorflow.keras.callbacks import ReduceLROnPlateau, CSVLogger, EarlyStopping
 
 import sys
 sys.path.append( os.environ.get('HESSIANLEARN_PATH', "../../"))
