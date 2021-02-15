@@ -1,5 +1,7 @@
 from __future__ import division
 
+from math import ceil
+
 import six
 import tensorflow as tf
 import tensorflow.keras
