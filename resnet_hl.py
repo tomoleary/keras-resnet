@@ -1,6 +1,8 @@
 from __future__ import division
 
 import six
+import tensorflow as tf
+import tensorflow.keras
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import (
     Input,
@@ -89,7 +91,7 @@ def _shortcut(input, residual):
                           kernel_initializer="he_normal",
                           kernel_regularizer=l2(0.0001))(input)
 
-    return Add([shortcut, residual])
+    return tensorflow.keras.layers.add([shortcut, residual])
 
 
 def _residual_block(block_function, filters, repetitions, is_first_layer=False):
