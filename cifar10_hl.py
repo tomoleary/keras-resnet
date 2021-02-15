@@ -60,7 +60,7 @@ X_test -= mean_image
 X_train /= 128.
 X_test /= 128.
 
-classifier = resnet.ResnetBuilder.build_resnet_18((img_channels, img_rows, img_cols), nb_classes)
+classifier = resnet_hl.ResnetBuilder.build_resnet_18((img_channels, img_rows, img_cols), nb_classes)
 classifier.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['categorical_accuracy'])
