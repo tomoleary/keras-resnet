@@ -78,6 +78,8 @@ def _shortcut(input, residual):
     input_shape = K.int_shape(input)
     residual_shape = K.int_shape(residual)
     stride_width = int(round(input_shape[ROW_AXIS] / residual_shape[ROW_AXIS]))
+    pre_stride_height = round(input_shape[COL_AXIS] / residual_shape[COL_AXIS])
+    print('pre_stride_height = ',pre_stride_height)
     stride_height = int(round(input_shape[COL_AXIS] / residual_shape[COL_AXIS]))
     print('stride_width = ',stride_width)
     print('stride_height = ',stride_height)
