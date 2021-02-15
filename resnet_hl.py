@@ -13,8 +13,8 @@ from tensorflow.keras.layers import (
     MaxPooling2D,
     AveragePooling2D
 )
-from tensorflow.keras.layers.merge import add
-from tensorflow.keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers import Add
+from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras import backend as K
 
