@@ -89,7 +89,7 @@ def _shortcut(input, residual):
                           kernel_initializer="he_normal",
                           kernel_regularizer=l2(0.0001))(input)
 
-    return add([shortcut, residual])
+    return Add([shortcut, residual])
 
 
 def _residual_block(block_function, filters, repetitions, is_first_layer=False):
