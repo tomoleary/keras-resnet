@@ -1,22 +1,22 @@
 from __future__ import division
 
 import six
-from tf.keras.models import Model
-from tf.keras.layers import (
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import (
     Input,
     Activation,
     Dense,
     Flatten
 )
-from tf.keras.layers.convolutional import (
+from tensorflow.keras.layers.convolutional import (
     Conv2D,
     MaxPooling2D,
     AveragePooling2D
 )
-from tf.keras.layers.merge import add
-from tf.keras.layers.normalization import BatchNormalization
-from tf.keras.regularizers import l2
-from tf.keras import backend as K
+from tensorflow.keras.layers.merge import add
+from tensorflow.keras.layers.normalization import BatchNormalization
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras import backend as K
 
 
 def _bn_relu(input):
