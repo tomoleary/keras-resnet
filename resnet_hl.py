@@ -8,7 +8,7 @@ from tensorflow.keras.layers import (
     Dense,
     Flatten
 )
-from tensorflow.keras.layers.convolutional import (
+from tensorflow.keras.layers import (
     Conv2D,
     MaxPooling2D,
     AveragePooling2D
