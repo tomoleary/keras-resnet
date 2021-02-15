@@ -13,7 +13,7 @@ os.environ["KMP_WARNINGS"] = "FALSE"
 import tensorflow as tf
 from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.utils import np_utils
+from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import ReduceLROnPlateau, CSVLogger, EarlyStopping
 
 import sys
@@ -47,8 +47,8 @@ img_channels = 3
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 
 # Convert class vectors to binary class matrices.
-Y_train = np_utils.to_categorical(y_train, nb_classes)
-Y_test = np_utils.to_categorical(y_test, nb_classes)
+Y_train = to_categorical(y_train, nb_classes)
+Y_test = to_categorical(y_test, nb_classes)
 
 X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
